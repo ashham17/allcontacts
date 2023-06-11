@@ -41,10 +41,11 @@
   border: 1px solid rgb(218, 218, 218);
   box-sizing: border-box;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margine-bottom: -150px;
 }
 
 #search {
@@ -63,8 +64,8 @@
 }
 
 #content {
-    margin: 20px auto;
-    padding: 20px;
+    margin: 0;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.7);
     width: 100%;
     box-sizing: border-box;
@@ -123,12 +124,12 @@ marquee {
 </head>
 
 <body>
-    <div id="main">
+     <div id="main">
         <div id="banner">
             <img src=".jpg">
-	    </div>
             <div id="search">
-                <input type="text" name="gets" onkeyup="getResult()" id="text" placeholder="Search...">
+                <input type="text" name="gets" onKeyUp="getResult()" id="text" placeholder="Search...">
+            </div>
         </div>
         <div id="content">
             <table id="table">
@@ -171,6 +172,3 @@ marquee {
     <p>&nbsp;</p>
 </div>
 </html>
-
-
-
