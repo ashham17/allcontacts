@@ -6,7 +6,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("male.jpg");
+  background-image: url("Male.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,7 +19,6 @@ body {
 }
 
 #banner {
-  margin: 0 auto;
   padding: 150px;
   color: #FFF;
   font: 0.8em Cambria;
@@ -28,11 +27,13 @@ body {
   border: 1px solid rgb(218, 218, 218);
   text-align: center;
   box-sizing: border-box;
+  width: 100%;
 }
 
 #search {
   margin: 20px auto;
   text-align: center;
+  width: 100%;
 }
 #text {
   width: 400px;
@@ -40,17 +41,22 @@ body {
   color: rgb(10, 10, 10);
   font: 2em Cambria;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 #content {
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.7);
+    width: 80%;
+    box-sizing: border-box;
 }
 
 table {
     margin: 0 auto;
     border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
 }
 
 th {
