@@ -12,10 +12,14 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             background-image: url("male.jpg");
             background-size: cover;
             background-repeat: no-repeat;
-	    background-position: center;
+            background-position: center;
         }
 
         #main {
@@ -24,25 +28,27 @@
             border: 0px solid #FC;
         }
 
-        #banner {
-            margin: 0;
+         #banner {
             padding: 150px;
             color: #FFF;
             font: 0.8em Cambria;
             background: url("new.jpg") no-repeat center center;
-	    background-size: cover;
+            background-size: cover;
             border: 1px solid rgb(218, 218, 218);
+            box-sizing: border-box;
         }
 
         #search {
-            margin: 20px;
+            margin: 20px auto;
+            text-align: center;
         }
 
-        #text {
+         #text {
             width: 400px;
             padding: 10px;
             color: rgb(10, 10, 10);
             font: 2em Cambria;
+            box-sizing: border-box;
         }
 
         #content {
