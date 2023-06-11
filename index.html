@@ -16,7 +16,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-image: url("male.jpg");
+            background-image: url("Male.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -36,11 +36,13 @@
             background-size: cover;
             border: 1px solid rgb(218, 218, 218);
             box-sizing: border-box;
+    	    width: 100%;
         }
 
         #search {
             margin: 20px auto;
             text-align: center;
+	    width: 100%;
         }
 
          #text {
@@ -49,18 +51,22 @@
             color: rgb(10, 10, 10);
             font: 2em Cambria;
             box-sizing: border-box;
+	    max-width: 100%;
         }
 
         #content {
-            margin: 20px;
+            margin: 20px auto;
             padding: 20px;
             background: rgba(255, 255, 255, 0.7);
+            width: 80%;
+            box-sizing: border-box;
         }
 
         table {
             margin: 0 auto;
             border-collapse: collapse;
-            width: 80%;
+            width: 100%;
+            max-width: 100%;
         }
 
         th {
@@ -95,9 +101,9 @@
     <div id="main">
         <div id="banner">
             <img src=".jpg">
+	    </div>
             <div id="search">
-                <input type="text" name="gets" onKeyUp="getResult()" id="text" placeholder="Search...">
-            </div>
+                <input type="text" name="gets" onkeyup="getResult()" id="text" placeholder="Search...">
         </div>
         <div id="content">
             <table id="table">
@@ -110,16 +116,36 @@
                 <script type="text/javascript">
                     getTable();
                 </script>
+                <script type="text/javascript">
+                    function getResult() {
+                        var input = document.getElementById('text').value.toLowerCase();
+                        var table = document.getElementById('table');
+                        var rows = table.getElementsByTagName('tr');
+                        for (var i = 1; i < rows.length; i++) {
+                            var name = rows[i].getElementsByTagName('td')[0].textContent.toLowerCase();
+                            var number = rows[i].getElementsByTagName('td')[1].textContent.toLowerCase();
+                            if (name.includes(input) || number.includes(input)) {
+                                rows[i].style.display = '';
+                                rows[i].classList.add('search-result');
+                            } else {
+                                rows[i].style.display = 'none';
+                                rows[i].classList.remove('search-result');
+                            }
+                        }
+                    }
+                </script>
             </table>
 <marquee behavior="scroll" scrollamount="8" scrolldelay="95" direction="left">
-	<b><font color="rgb(245, 185, 66)" name="Tahoma">:.::PLZ LEAVE ANY NUMBERS YOU WISH TO UPDATE IN THE NOTEPAD, I WILL UPDATE THEM AS SOON AS POSSIBLE THANK YOU!! ::.:</font>
+    <b><font color="rgb(245, 185, 66)" name="Tahoma">:.::PLZ LEAVE ANY NUMBERS YOU WISH TO UPDATE IN THE NOTEPAD, I WILL UPDATE THEM AS SOON AS POSSIBLE THANK YOU!! ::.:</font>
 </marquee>
         </div>
     </div>
     <div id="Footer">
-		<p>Terminal Operations &copy; 2023. Ali Ashham</p>
-	</div>
-	<p>&nbsp;</p>
+        <p>Terminal Operations &copy; 2023. Ali Ashham</p>
+    </div>
+    <p>&nbsp;</p>
 </div>
+</html>
+
 
 
