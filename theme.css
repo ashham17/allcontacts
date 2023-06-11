@@ -75,15 +75,13 @@ th {
     color: #FFF;
     padding: 10px;
     white-space: nowrap;
-    overflow: auto;
-    text-overflow: ellipsis;
+   
 }
 
 td {
     padding: 10px;
     white-space: nowrap;
-    overflow: auto;
-    text-overflow: ellipsis;
+  
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;
