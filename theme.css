@@ -2,6 +2,10 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: url("male.jpg");
   background-size: cover;
   background-repeat: no-repeat;
