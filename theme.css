@@ -50,12 +50,13 @@ body {
   color: rgb(10, 10, 10);
   font: 2em Cambria;
   box-sizing: border-box;
+  margin: 0 auto;
   
 }
 
 #content {
-    margin: 0;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.7);
     width: 100%;
     box-sizing: border-box;
@@ -65,23 +66,28 @@ body {
 table {
     margin: 0 auto;
     border-collapse: collapse;
+    table-layout: fixed;
     width: 100%;
     max-width: 100%;
-    table-layout: fixed;
 }
 
 th {
     background-color: #333;
     color: #FFF;
     padding: 10px;
-    white-space: nowrap;
-   
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 td {
     padding: 10px;
-    white-space: nowrap;
-  
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;
