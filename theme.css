@@ -79,6 +79,7 @@ th {
     word-wrap: break-word;
     hyphens: auto;
     max-width: 100%;
+    font-weight: bold; /* Added to display the data in bold */
 }
 
 td {
@@ -87,6 +88,7 @@ td {
     word-wrap: break-word;
     hyphens: auto;
     max-width: 100%;
+    font-weight: bold; /* Added to display the data in bold */
 
 }
 tr:nth-child(even) {
@@ -111,12 +113,31 @@ tr:nth-child(even) {
     padding: 10px;
 }
 
-marquee {
-    background: darkgray;
-    color: white;
+#marquee {
     padding: 10px;
+    color: #0070FF;
+    font: 0.9em Tahoma;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    white-space: nowrap;
 }
 
+#marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 18s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
 .search-result td {
     background-color: red;
     color: white;
